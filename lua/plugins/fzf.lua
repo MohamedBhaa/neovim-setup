@@ -68,11 +68,11 @@ return {
 			desc = "[F]uzzyFind [R]esume",
 		},
 		{
-			"<leader>?",
+			"<leader>/",
 			function()
 				require("fzf-lua").lgrep_curbuf()
 			end,
-			desc = "[?] grep inside the current buffer",
+			desc = "[/] grep inside the current buffer",
 		},
 	},
 }

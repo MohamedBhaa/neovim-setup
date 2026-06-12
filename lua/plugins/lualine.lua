@@ -2,9 +2,9 @@ return {
 	"nvim-lualine/lualine.nvim",
 	dependencies = { "nvim-tree/nvim-web-devicons" },
 	opts = {
-		theme = "gruvbox_custom",
-		component_separators = { left = "", right = "" },
-		section_separators = { left = "", right = "" },
+		theme = "",
+		-- component_separators = { left = "", right = "" },
+		-- section_separators = { left = "", right = "" },
 		refresh = {
 			statusline = 500,
 			tabline = 500,
