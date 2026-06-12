@@ -17,6 +17,11 @@ vim.opt.undofile = true
 
 vim.opt.mouse = "a"
 
+vim.opt.showmode = false
+
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
+
 vim.opt.splitright = true
 vim.opt.splitbelow = true
 
