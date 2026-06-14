@@ -1,0 +1,16 @@
+{
+	"diagnostics": {
+		"globals": [
+			"vim"
+		],
+		"disable": [
+			"param-type-mismatch"
+		]
+	},
+	"workspace": {
+		"checkThirdParty": false,
+		"library": [
+			"/usr/share/nvim/runtime/lua"
+		]
+	}
+}

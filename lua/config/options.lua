@@ -28,4 +28,16 @@ vim.opt.splitbelow = true
 vim.opt.list = true
 vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
 
-vim.opt.scrolloff = 5
+vim.opt.scrolloff = 8
+
+vim.opt.signcolumn = "yes"
+vim.opt.cmdheight = 0
+
+vim.opt.termguicolors = true
+
+vim.api.nvim_create_autocmd("TextYankPost", {
+	desc = "Highlight when yank (copying) text.",
+	callback = function()
+		vim.hl.on_yank()
+	end,
+})

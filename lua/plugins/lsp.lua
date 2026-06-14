@@ -135,12 +135,20 @@ return {
 		})
 
 		local capabilities = vim.lsp.protocol.make_client_capabilities()
-		-- capabilities = vim.tbl_deep_extend('force', capabilities, require('cmp_nvim_lsp').default_capabilities())
+		capabilities = vim.tbl_deep_extend("force", capabilities, require("blink.cmp").get_lsp_capabilities())
+		-- capabilities = vim.tbl_deep_extend("force", capabilities, require("cmp_nvim_lsp").default_capabilities())
 
 		local servers = {
-			lua_ls = {},
+			lua_ls = {
+				settings = {
+					Lua = {
+						diagnostics = { globals = { "vim" } },
+					},
+				},
+			},
 			bashls = {},
 			jsonls = {},
+			pylsp = {},
 		}
 
 		-- You can add other tools here that you want Mason to install
@@ -151,6 +159,7 @@ return {
 			"prettierd",
 			"kdlfmt",
 			"tombi",
+			"pyproject-fmt",
 		})
 		require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
 

@@ -29,17 +29,23 @@ return {
 		},
 
 		-- (Default) Only show the documentation popup when manually triggered
-		signature = { enabled = true },
+		signature = {
+			enabled = true,
+		},
 		completion = {
 			menu = {
 				max_height = 20,
 				scrollbar = false,
 			},
-			documentation = { auto_show = true },
+			documentation = {
+				auto_show = true,
+				auto_show_delay_ms = 500,
+				update_delay_ms = 50,
+			},
 			ghost_text = {
 				enabled = true,
 				-- Show the ghost text when an item has been selected
-				show_with_selection = true,
+				show_with_selection = false,
 				-- Show the ghost text when no item has been selected, defaulting to the first item
 				show_without_selection = false,
 				-- Show the ghost text when the menu is open
